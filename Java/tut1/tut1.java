@@ -1,5 +1,3 @@
-package Tutorial1;
-
 public class tut1 {
 
 	/* For q1, we can see if the class is even or not based on the last digit
@@ -29,9 +27,13 @@ public class tut1 {
 	}
 	
 	/* For q3, 
-	 * 
+	 *  
 	 */
-	
+  enum myEnum{
+    HITHERE,
+    WHATSGOOD,
+    YEAH
+  }	
 	
 
 	public static void main(String args[]) {
@@ -69,6 +71,7 @@ public class tut1 {
 						);
 		
 		System.out.println(q1_output + q2_output + q3_output);
+    myEnum x = myEnum.WHATSGOOD;
+    System.out.println(x);
 	}
-
 }

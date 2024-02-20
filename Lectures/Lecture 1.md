@@ -227,4 +227,5 @@ _____
 ## Actions
 - [x] Check the slides/canvas page for assessments and write up
 - [ ] Read Java related textbook chapters
-- [ ] Create git repo for unit
+- [ ] Prepare for tutorial 
+- [x] Create git repo for unit
