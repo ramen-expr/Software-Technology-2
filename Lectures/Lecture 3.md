@@ -74,3 +74,16 @@ public class Main {
 }
 ```
 
+## Array Lists
+[[Array Lists]]
+
+Now, hold on because there is something super cool that we can do to sort Array Lists. First, import `java.util.Collections`, and assuming we have an Array List with a bunch of car brands, do the following:
+```java
+Collections.sort(cars);
+```
+This will sort our Array List alphabetically, and for different lists, numerically. 
+
+Array lists are very inefficient resource wise and ==should be avoided where possible.== 
+
+## Linked Lists
+Woah woah woah, look out, upgrade is here. 

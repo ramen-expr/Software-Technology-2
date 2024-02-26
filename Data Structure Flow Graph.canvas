@@ -7,7 +7,8 @@
 		{"id":"a40932bc0ea33db3","type":"text","text":"### Dynamic","x":-224,"y":20,"width":169,"height":58},
 		{"id":"b6f53d3be61fa236","type":"text","text":"### Tree","x":115,"y":20,"width":125,"height":58},
 		{"id":"f3b48fa28e9e63b5","type":"text","text":"### Graph","x":380,"y":20,"width":138,"height":58},
-		{"id":"fe73231c5a12c95a","x":-900,"y":260,"width":400,"height":380,"type":"file","file":"Software Technology 2/Data Structures/Arrays.md"}
+		{"id":"fe73231c5a12c95a","type":"file","file":"Software Technology 2/Data Structures/Arrays.md","x":-900,"y":260,"width":400,"height":380},
+		{"id":"3a405eb2c23ad830","x":-410,"y":260,"width":400,"height":400,"type":"file","file":"Software Technology 2/Data Structures/Array Lists.md"}
 	],
 	"edges":[
 		{"id":"5a211cd3d07c3574","fromNode":"e01d5b43199ed684","fromSide":"bottom","toNode":"032718236661e214","toSide":"top"},
@@ -16,6 +17,7 @@
 		{"id":"ed138f3db2b6bf38","fromNode":"032718236661e214","fromSide":"bottom","toNode":"a40932bc0ea33db3","toSide":"top"},
 		{"id":"806f0a4b8778df12","fromNode":"278b81d3854cfda0","fromSide":"bottom","toNode":"b6f53d3be61fa236","toSide":"top"},
 		{"id":"435b21fb6420c998","fromNode":"278b81d3854cfda0","fromSide":"bottom","toNode":"f3b48fa28e9e63b5","toSide":"top"},
-		{"id":"019f441e3b99b219","fromNode":"2a0c95f3a22f3fa2","fromSide":"bottom","toNode":"fe73231c5a12c95a","toSide":"top"}
+		{"id":"019f441e3b99b219","fromNode":"2a0c95f3a22f3fa2","fromSide":"bottom","toNode":"fe73231c5a12c95a","toSide":"top"},
+		{"id":"ffa401a03e73da80","fromNode":"a40932bc0ea33db3","fromSide":"bottom","toNode":"3a405eb2c23ad830","toSide":"top"}
 	]
 }
