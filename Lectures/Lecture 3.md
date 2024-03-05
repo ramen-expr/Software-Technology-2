@@ -86,4 +86,4 @@ This will sort our Array List alphabetically, and for different lists, numerical
 Array lists are very inefficient resource wise and ==should be avoided where possible.== 
 
 ## Linked Lists
-Woah woah woah, look out, upgrade is here. 
+Woah woah woah, look out, upgrade is here. [[Linked Lists]]
