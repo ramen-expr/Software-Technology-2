@@ -29,3 +29,62 @@ Question that have been raised in my mind: ==What the hell is synchronised in th
 
 In summary, Linked Lists are fantastic for manipulating data, but not amazing for storing it. An ArrayList is the opposite. Manipulating it sucks but getting information from it while it is not being modified is actually pretty good.
 
+To add the predefined linked list, an example can be seen below:
+```java
+import java.util.LinkedList;
+
+class Main{
+	public static void main(String args[]){
+		LinkedList<String> names = new LinkedList<String>();
+	}
+}
+```
+
+By default, this one is a doubly linked list. The Java defined linked list has some default functions, very similar (identical to my knowledge) functions to the Array Lists.
+
+You can add to the list by using the `.add(...)` function. You may include the index at which this element should be added.
+```Java
+cars.add(1, "Mazda");
+cars.add("Lambo");
+```
+
+There are also specific functions for adding at the start or end of a list. 
+```java
+cars.addLast("Toyota");
+cars.addFirst("Subaru");
+```
+
+To access elements within the ArrayList, use the `.get(...)` method.
+```Java
+cars.get(0);
+>>> "Mazda"
+```
+
+Use the `.set(...)` method to modify elements within an Array List.
+```Java
+cars.set(1, "Volvo");
+```
+
+To remove an element, use the `.remove(...)` function.
+```Java
+cars.remove(1);
+cars.remove("Subrau ")
+```
+
+Similar to the add functions, there are functions to remove the first or last elements.
+```Java
+cars.removeFirst();
+cars.removeLast();
+```
+
+To clear the Array List, simply use the `.clear()` function.
+```Java
+cars.clear();
+```
+
+To find the size of the list, we have the `.size()` function, returning an integer.
+
+### Benefits
+- Can allocate and deallocate memory at runtime
+- Super modifiable
+- Makes good use of memory, as allocation is not needed ahead of time.

@@ -226,6 +226,6 @@ Come back to this
 _____
 ## Actions
 - [x] Check the slides/canvas page for assessments and write up
-- [ ] Read Java related textbook chapters
-- [ ] Prepare for tutorial 
+- [x] Read Java related textbook chapters
+- [x] Prepare for tutorial 
 - [x] Create git repo for unit
