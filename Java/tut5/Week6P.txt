@@ -1,0 +1,15 @@
+Part 1. Working with files in Java
+First save week6Lab.txt file from Canvas Week 6 in a specific directory in your computer and then practice the following exercises on this file and its directory.
+
+1.	Write a Java program to get a list of all file/directory names in the given directory.
+2.	 Write a Java program to check if the file or directory specified by pathname exists or not.
+3.	Write a Java program to get the file size in bytes, KB, MB.
+4.	Write a Java program to read file content line by line.
+5.	Write a Java program to store text file content line by line in an array.
+6.	Write a Java program to append text to an existing file.
+7.	Write a Java program to read the first 3 lines of a file.
+
+Part 2. Sorting Algorithm
+
+
+
