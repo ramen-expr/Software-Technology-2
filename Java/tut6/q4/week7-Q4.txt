@@ -1,0 +1,65 @@
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class PhoneNumbersSorting {
+    public static void main(String[] args) {
+        String fileName = "phone_numbers.txt"; // Name of the file containing phone numbers
+        String[] phoneNumbers = readPhoneNumbersFromFile(fileName);
+
+        if (phoneNumbers != null && phoneNumbers.length > 0) {
+            insertionSort(phoneNumbers);
+            writeSortedPhoneNumbersToFile(phoneNumbers, fileName);
+            System.out.println("Phone numbers sorted successfully!");
+        } else {
+            System.out.println("No phone numbers found in the file.");
+        }
+    }
+
+    // Method to read phone numbers from a file and store them in an array
+    private static String[] readPhoneNumbersFromFile(String fileName) {
+        try (BufferedReader reader = new BufferedReader(new FileReader(fileName))) {
+            String line;
+            int count = 0;
+            while (reader.readLine() != null) {
+                count++;
+            }
+            String[] phoneNumbers = new String[count];
+            reader.close();
+            reader = new BufferedReader(new FileReader(fileName));
+            int index = 0;
+            while ((line = reader.readLine()) != null) {
+                phoneNumbers[index++] = line;
+            }
+            return phoneNumbers;
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    // Method to sort phone numbers using insertion sort algorithm
+    private static void insertionSort(String[] array) {
+        for (int i = 1; i < array.length; i++) {
+            String key = array[i];
+            int j = i - 1;
+            while (j >= 0 && array[j].compareTo(key) > 0) {
+                array[j + 1] = array[j];
+                j--;
+            }
+            array[j + 1] = key;
+        }
+    }
+
+    // Method to write sorted phone numbers back to the file
+    private static void writeSortedPhoneNumbersToFile(String[] phoneNumbers, String fileName) {
+        try (FileWriter writer = new FileWriter(fileName)) {
+            for (String phoneNumber : phoneNumbers) {
+                writer.write(phoneNumber + "\n");
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
