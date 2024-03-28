@@ -44,3 +44,4 @@ If odd
 - Move one disk from peg A to peg C or vice versa, whichever move is legal.
 - Move one disk from peg A to peg B or vice versa, whichever move is legal.
 - Move one disk from peg B to peg C or vice versa, whichever move is legal.
+
