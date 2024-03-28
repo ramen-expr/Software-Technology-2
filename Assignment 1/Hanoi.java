@@ -3,6 +3,7 @@ import java.util.Stack;
 public class Hanoi {
   // Create the three pegs
   Stack<Integer>[] pegs = new Stack[3];
+  int size;
 
   public Hanoi(int numLayers) {
     // initialise the individual stacks
@@ -13,6 +14,7 @@ public class Hanoi {
     for (int i=0; i < numLayers; i++){
       pegs[0].push(numLayers - i);
     }
+    size = numLayers;
   }
 
   // To reduce the amount of parameters passed to the moveTo function, 
@@ -53,12 +55,12 @@ public class Hanoi {
     }
   }
 
+  // Check for a solved board
   public boolean checkSolved() {
     Stack<Integer> ref = new Stack<Integer>();
-    for (int i = 5; i > 0; i--){
+    for (int i = size; i > 0; i--){
       ref.push(i);
     }
-    System.out.println(ref);
 
     if (pegs[2].equals(ref)){
       return true;
@@ -68,38 +70,48 @@ public class Hanoi {
     }
   }
 
-  // Algorithm 1: Solving recusively.
-  public void solveRecursively(int from, int to, int layer) {
-    int unused = findOtherPeg(from, to);
-    if (layer != 1){
-      solveRecursively(from, unused, layer-1);
-    }
 
-    moveTo(from, to);
-    
-    if (layer != 1){
-      solveRecursively(unused, to, layer-1);
+  // Simple integer comparator
+  public int findLargest(int first, int second) {
+    if (first > second){
+      return first;
+    }
+    else {
+      return second;
     }
   }
 
-  public void solveIteratively() {
-    
+  // Find the stack with the larger item to determine which piece shoulc be moved
+  public int findLargestTopStack(int pegRef1, int pegRef2) {
+    // In case where a peg is empty, that is deemed to be the destination
+    if (pegs[pegRef1].size() == 0){
+      return pegRef1; 
+    }
+    else if (pegs[pegRef2].size() == 0){
+      return pegRef2;
+    }
+    // Find the top pieces of each peg
+    int topPiece1 = pegs[pegRef1].peek();
+    int topPiece2 = pegs[pegRef2].peek();
+
+    // Find the larger of the two
+    int largestPiece = findLargest(topPiece1, topPiece2);
+
+    // Whichever is largest, return the index of the larger peg
+    if (largestPiece == topPiece1){
+      return pegRef1;
+    }
+    else {
+      return pegRef2;
+    }
   }
 
+  // display the Hanoi pegs
   public String toString() {
     String output = "";
     for (int i=0; i<3; i++){
       output += pegs[i] + "\n";
     }
     return output;
-  }
-
-  public static void main(String[] args) {
-    Hanoi game1 = new Hanoi(5);
-    game1.solveRecursively(0, 2, 5);
-    System.out.println(game1.checkSolved());
-    System.out.println(game1);
-
-    Hanoi game2 = new Hanoi(4);
-  }
+  } 
 }

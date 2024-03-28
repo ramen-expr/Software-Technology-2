@@ -32,6 +32,7 @@ FUNCTION SolveLayer(starting_stack, destination_stack, layer)
 END FUNCTION
 ```
 
+The time complexity for this algorithm is $O(2^n)$, as the number of moves is a summation of $2^n$. The space complexity of this algorithm is $O(n)$, as the number of recursive calls is limited to $n-1$. 
 ## Algorithm 2
 The iterative solution is equivalent to repeated execution of the following sequence of steps until the goal has been achieved:
 
@@ -44,4 +45,8 @@ If odd
 - Move one disk from peg A to peg C or vice versa, whichever move is legal.
 - Move one disk from peg A to peg B or vice versa, whichever move is legal.
 - Move one disk from peg B to peg C or vice versa, whichever move is legal.
+
+The time complexity of this algorithm is $O(2^n)$, as the number of moves are the same as the first algorithm. Thus the time it takes to calculate the iterative function does not change. The space complexity also does not change, as there are only operations being performed on the same variables, leading to a space complexity of $O(n)$, because there are $n$ pieces that can exist. 
+## Which is better?
+In terms of time complexity, neither algorithm is better than the other, as they both have the same number of moves and overall loops as each other. In terms of space complexity, both store $n$ items, but the recursive algorithm also stores the recursive functions that lay on top of one another, leading to a lot more working memory storage during the execution. For that reason, the second algorithm is better.
 
