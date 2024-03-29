@@ -19,7 +19,7 @@ public class recursive extends Hanoi {
   }
 
   public static void main(String[] args) {
-    int num_pieces = 4;
+    int num_pieces = 6;
     recursive game = new recursive(num_pieces);
     game.solveRecursively(0, 2, num_pieces);
   }

@@ -49,4 +49,3 @@ If odd
 The time complexity of this algorithm is $O(2^n)$, as the number of moves are the same as the first algorithm. Thus the time it takes to calculate the iterative function does not change. The space complexity also does not change, as there are only operations being performed on the same variables, leading to a space complexity of $O(n)$, because there are $n$ pieces that can exist. 
 ## Which is better?
 In terms of time complexity, neither algorithm is better than the other, as they both have the same number of moves and overall loops as each other. In terms of space complexity, both store $n$ items, but the recursive algorithm also stores the recursive functions that lay on top of one another, leading to a lot more working memory storage during the execution. For that reason, the second algorithm is better.
-
